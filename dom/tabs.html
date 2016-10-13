@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .box {
+            width: 400px;
+            height: 300px;
+            border: 1px solid #ccc;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+
+        .hd {
+            height: 45px;
+        }
+
+        .hd span {
+            display: inline-block;
+            width: 90px;
+            background-color: pink;
+            line-height: 45px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .hd span.current {
+            background-color: purple;
+        }
+
+        .bd li {
+            height: 255px;
+            background-color: purple;
+            display: none;
+        }
+
+        .bd li.current {
+            display: block;
+        }
+    </style>
+
+</head>
+<body>
+<div class="box" id="box">
+    <div class="hd">
+        <span class="current">体育</span>
+        <span>娱乐</span>
+        <span>新闻</span>
+        <span>综合</span>
+    </div>
+    <div class="bd">
+        <ul>
+            <li class="current">我是体育模块</li>
+            <li>我是娱乐模块</li>
+            <li>我是新闻模块</li>
+            <li>我是综合模块</li>
+        </ul>
+    </div>
+</div>
+<script>
+    var box = document.getElementById("box");
+    var spans = box.getElementsByTagName("span");
+    var lis = box.getElementsByTagName("li");
+
+    for(var i=0;i<spans.length;i++) {
+    	var span = spans[i];
+        // span.indexForTabs = i;  //将索引号保存到对象的自定义属性中
+        span.setAttribute("indexForTabs", i);
+
+    	span.onclick = function() {
+    		for(var j=0;j<spans.length;j++) {
+    			// spans[j].className = "";
+                spans[j].removeAttribute("class");
+    		}
+
+    		// this.className = "current";
+            this.setAttribute("class", "current");
+
+            for(var k=0;k<lis.length;k++) {
+                // lis[k].className = "";
+                lis[k].removeAttribute("class");
+            }
+
+            // var index = this.indexForTabs;
+            var index = this.getAttribute("indexForTabs");
+
+            // lis[index].className = "current";
+            lis[index].setAttribute("class", "current");
+    	}
+    }
+
+</script>
+</body>
+</html>

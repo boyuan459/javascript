@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Exclude</title>
+	<style>
+		.current {
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+<div id="menu">
+	<ul id="list">
+		<li class="current"><a href="javascript:void(0)">Home</a></li>
+		<li><a href="javascript:void(0)">Blog</a></li>
+		<li><a href="javascript:void(0)">Gallery</a></li>
+		<li><a href="javascript:void(0)">About</a></li>
+		<li><a href="javascript:void(0)">help</a></li>
+	</ul>
+</div>
+
+<script type="text/javascript">
+
+var ul = document.getElementById("list");
+var nodes = ul.childNodes;
+
+console.log(nodes);
+
+for(var i=0;i<nodes.length;i++) {
+	if (nodes[i].nodeType == 1) {
+		//element node
+		nodes[i].onclick = function() {
+			//remove current from all
+			for(var j=0;j<nodes.length;j++) {
+				if (nodes[j].nodeType == 1) {
+					nodes[j].className = "";
+				}
+			}
+			this.className = "current";
+		}
+	}
+}
+
+</script>
+</body>
+</html>

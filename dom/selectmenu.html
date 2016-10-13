@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Select Menu</title>
+		<style type="text/css">
+			body {
+				background: url(images/1.jpg) no-repeat;
+			}
+		</style>
+	</head>
+	<body>
+		<select name="menu" id="menu">
+			<option value="1">Blue Sky</option>
+			<option value="2">Teddy Bear</option>
+			<option value="3">Road</option>
+		</select>
+
+		<script type="text/javascript">
+			var select = document.getElementById('menu');
+			select.onchange = function() {
+				// console.log(this.value);
+				document.body.style.backgroundImage = 'url(images/' + this.value + '.jpg)';
+			};
+		</script>
+	</body>
+</html>

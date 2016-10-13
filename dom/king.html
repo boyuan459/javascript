@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<select name="" id="fp">
+		<option value="rh">Shasha</option>
+		<option value="sz">Suzie</option>
+		<option value="sa">Sara</option>
+		<option value="ab">Abby</option>
+		<option value="mi">Mini</option>
+	</select>
+	<input type="button" value="F*" id="btn"/>
+
+	<script type="text/javascript">
+		var btn = document.getElementById('btn');
+		var fp = document.getElementById('fp');
+		var options = fp.children;
+
+		btn.onclick = function() {
+			var random = parseInt(Math.random() * options.length);
+			var option = options[random];
+			option.selected = true;
+		};
+	</script>
+</body>
+</html>

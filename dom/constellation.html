@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			.box {
+				width: 350px;
+				height: 250px;
+				border: 1px solid #ccc;
+				margin: 100px auto;
+			}
+			.dt {
+				padding-left: 10px;
+				line-height: 35px;
+				font-weight: 700;
+				color: #36c;
+			}
+			.dd {
+				padding: 10px;
+			}
+			.dd-t {
+				overflow: hidden;
+			}
+			.icon {
+				height: 50px;
+				width: 50px;
+				float: left;
+				background: url(images/astroIcon.png) no-repeat;
+			}
+			.fortune {
+				width: 80px;
+				height: 13px;
+				display: inline-block;
+				position: relative;
+				background: url(images/yunshi.png) no-repeat;
+			}
+			.star {
+				width: 0;
+				height: 13px;
+				top: 0;
+				left: 0;
+				position: absolute;
+				background: url(images/yunshi.png) no-repeat left bottom;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function() {
+				function $(id) {return document.getElementById(id)}
+				var stars = [10,9,6,8,9];
+				var select = document.getElementById("constellation");
+				$('star').style.width = stars[0] * 8 + 'px';
+				select.onchange = function() {
+					$('icon').style.backgroundPosition = "0 " + (-this.value * 50) + "px";
+					$('star').style.width = stars[this.value] * 8 + 'px';
+				};
+			}
+		</script>
+	</head>
+	<body>
+		<div class="box">
+			<div class="dt">Constellation</div>
+			<div class="dd">
+				<div class="dd-t">
+					<div class="icon" id="icon"></div>
+					<div class="right">
+						<select name="constellation" id="constellation">
+							<option value="0">Aries 03.21-04.19</option>
+							<option value="1">Taurus 04.20-05.20</option>
+						</select>
+						<div>Today's Fortune: <span class="fortune"><span class="star" id="star"></span></span></div>
+					</div>
+				</div>
+				<div class="dd-b" id="content">
+					Very good luck with fortune, may have crisis without awareness.
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

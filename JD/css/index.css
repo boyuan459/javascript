@@ -1,0 +1,299 @@
+/*nav start*/
+.nav {
+	/*height: 44px;*/
+	/*background-color: pink;*/
+	border-bottom: 2px solid #B1191A;
+}
+
+.nav .categories {
+	width: 210px;
+	height: 44px;
+	background-color: #B1191A;
+	float: left;
+	overflow: visible;
+	z-index: 999;
+	position: relative;
+}
+
+.nav .cate-dt {
+	width: 210px;
+	height: 44px;
+	background-color: #B1191A;
+}
+
+.nav .cate-dt a {
+	width: 200px;
+	height: 44px;
+	display: block;
+	font: 400 15px/44px 'microsoft yahei';
+	color: #fff;
+	text-decoration: none;
+	padding-left: 10px;
+}
+
+.nav .cate-dd {
+	width: 209px;
+	/*height: 466px;*/
+	margin-top: 2px;
+	background-color: #C81623;
+	border-left: 1px solid #B61D1D;
+}
+
+.nav .cate-item {
+	width: 199px;
+	height: 31px;
+	padding-left: 10px;
+	position: relative;
+}
+
+.nav .cate-item a {
+	font: 400 14px/31px 'microsoft yahei';
+	color: #fff;
+}
+
+.nav .cate-item i {
+	font: 400 9px/31px consola;
+	color: #fff;
+	position: absolute;
+	top: 0;
+	right: 7px;
+}
+
+.nav .navitems {
+	width: 720px;
+	height: 44px;
+	/*background-color: blue;*/
+	float: left;
+}
+
+.navitems li {
+	float: left;
+	font: 400 16px/44px "microsoft yahei";
+	/*padding: 0 20px;*/
+	position: relative;
+}
+
+.navitems li a {
+	display: block;
+	padding: 0 20px;
+}
+
+.navitems i {
+	width: 28px;
+	height: 18px;
+	background-color: red;
+	position: absolute;
+	top: 0;
+	right: -8px;
+	background: url(../images/tmo.jpg) 0 0 no-repeat;
+}
+
+/*nav end*/
+
+/* main start */
+.main {
+	/*height: 500px;
+	background-color: pink;*/
+}
+
+.slider {
+	width: 730px;
+	height: 454px;
+	/*background-color: red;*/
+	float: left;
+	margin-left: 220px;
+	margin-top: 12px;
+	position: relative;
+}
+
+.slider-nav {
+	/*width: 128px;*/
+	height: 18px;
+	/*background-color: red;*/
+	position: absolute;
+	left: 50%;
+	bottom: 8px;
+	margin-left: -64px;
+}
+
+.slider-nav .slider-item {
+	float: left;
+	width: 18px;
+	height: 18px;
+	background-color: #3E3E3E;
+	margin: 0 2px;
+	text-align: center;
+	color: #fff;
+	border-radius: 9px;
+}
+
+.slider-item a {
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+}
+
+.slider-nav .active {
+	background-color: #B61B1F;
+}
+
+.slider .arrow a {
+	width: 28px;
+	height: 62px;
+	background-color: rgba(0,0,0,.2);
+	position: absolute;
+	top: 50%;
+	
+	margin-top: -31px;
+	font: 400 22px/62px "simsun";
+	color: #fff;
+	text-align: center;
+}
+
+.slider .arrow-l {
+	left: 0;
+}
+
+.slider .arrow-r {
+	right: 0;
+}
+
+.main-extra {
+	width: 250px;
+	height: 454px;
+	/*background-color: blue;*/
+	float: right;
+	margin-top: 12px;
+}
+
+.main-extra .news {
+	/*width: 248px;
+	height: 162px;
+	background-color: pink;*/
+	border: 1px solid #E4E4E4;
+	border-bottom: 0;
+}
+
+.main-extra .news .mt {
+	width: 219px;
+	height: 32px;
+	/*background-color: red;*/
+	border-bottom: 1px dotted #E4E4E4;
+	padding-left: 15px;
+	padding-right: 14px;
+}
+
+.main-extra .news .mt h2 {
+	font: 400 16px/32px 'microsoft yahei';
+	float: left;
+}
+
+.main-extra .news .mt a {
+	float: right;
+	line-height: 32px;
+	font: 400 13px/32px 'microsoft yahei';
+}
+
+.main-extra .news .mc {
+	width: 233px;
+	height: 126px;
+	/*background-color: blue;*/
+	padding-top: 4px;
+	padding-left: 15px;
+}
+
+.main-extra .mc li {
+	line-height: 24px;
+
+}
+
+.main-extra .mc li span {
+	font-weight: 700;
+	margin-right: 5px;
+}
+
+.main-extra .lifeserv {
+	width: 248px;
+	height: 208px;
+	/*background-color: pink;*/
+	border: 1px solid #E4E4E4;
+	overflow: hidden;
+}
+
+.main-extra .lifeserv ul {
+	width: 252px;
+}
+
+.main-extra .lifeserv li {
+	width: 62px;
+	height: 70px;
+	border-right: 1px solid #E8E8E7;
+	border-bottom: 1px solid #E8E8E7;
+	float: left;
+	position: relative;
+}
+
+.main-extra .lifeserv a {
+	width: 62px;
+	height: 21px;
+	display: block;
+	text-align: center;
+	padding-top: 49px;
+}
+
+.main-extra .lifeserv i {
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	top: 10px;
+	left: 18px;
+	/*background: url(../images/icon_lifeserv.png) -25px 0 no-repeat;*/
+}
+
+.main-extra .lifeserv .icon2 {
+	background: url(../images/icon_lifeserv.png) -25px -25px no-repeat;
+}
+
+.main-extra .right-pic {
+	width: 250px;
+	height: 75px;
+	background-color: red;
+	margin-top: 5px;
+}
+
+/* main end */
+
+/* today promotion*/
+.today {
+	/*height: 160px;
+	background-color: pink;*/
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.today .mt {
+	width: 210px;
+	height: 151px;
+	background-color: red;
+	float: left;
+}
+
+.today .mc {
+	width: 1000px;
+	height: 164px;
+	/*background-color: blue;*/
+	float: right;
+	overflow: hidden;
+}
+
+.today .mc ul {
+	width: 6000px;
+}
+
+.today .mc li {
+	float: left;
+	margin-right: 1px;
+
+}
+
+/* today promotion */

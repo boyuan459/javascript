@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<ul id="ul">
+	<li>123</li>
+	<li>234</li>
+	<li>345</li>
+	<li id="one">345</li>
+	<li>567</li>
+	<li>3344</li>
+</ul>
+<script type="text/javascript">
+	var one = document.getElementById("one");
+	console.dir(one);
+	var div = one.nextElementSibling || one.nextSibling;
+	div.style.backgroundColor = "red";
+
+	var ul = document.getElementById('ul');
+	var children = ul.children;
+	console.log(children.length);
+</script>
+</body>
+</html>

@@ -1,0 +1,433 @@
+@charset "UTF-8"
+/* css initialize */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+	margin: 0; 
+	padding: 0;
+}
+
+/* remove blue border in form element, different browser has difference display */
+fieldset, img, input, button {
+	border: none;
+	padding: 0;
+	margin: 0;
+	outline-style: none;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+input {
+	padding-top: 0;
+	padding-bottom: 0;
+	font-family: "SimSun", "宋体";
+}
+
+/* remove the spare margin in row */
+select, input {
+	vertical-align: middle;
+}
+
+img {
+	border: 0;
+	vertical-align: middle;
+}
+
+select, input, textarea {
+	font-size: 12px;
+	margin: 0;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+/* avoid layout chaos when dragging */
+textarea {
+	resize: none;
+}
+
+body {
+	font: 12px/150% Arial, Verdana, "\5b8b\4f53"; /* 宋体unicode*/
+	color: #666;
+	background: #fff;
+}
+
+/* clear float */
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix {
+	*zoom: 1; /*IE 7/6*/
+}
+
+a {
+	color: #666;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #C81623;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-decoration: none;
+	font-weight: normal;
+	font-size: 100%;
+}
+
+s, i, em {
+	font-style: normal;
+	text-decoration: none;
+}
+
+.col-red {
+	color: #C81623 !important;
+}
+
+.w {
+	width: 1210px;
+	margin: 0 auto;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.al {
+	text-align: left;
+}
+
+.ac {
+	text-align: center;
+}
+
+.ar {
+	text-align: right;
+}
+
+.hide {
+	display: none;
+}
+
+/* top toolbar start*/
+.shortcut {
+	/*height: 30px;*/
+	background-color: #F1F1F1;
+	line-height: 30px;
+}
+
+.shortcut .fr {
+	background-color: #F1F1F1;
+}
+
+.shortcut .dropdown {
+	padding-right: 25px;
+	position: relative;
+}
+
+.dropdown i {
+	width: 15px;
+	height: 9px;
+	/*background-color: red;*/
+	position: absolute;
+	top: 12px;
+	right: 7px;
+	overflow: hidden;
+}
+
+.dropdown s {
+	font: 400 15px/15px consolas;	/*write together font-weight font-size/line-height font family*/
+	position: absolute;
+	top: -7px;
+	left: 0;
+}
+
+.shortcut li {
+	float: left;
+	padding: 0 10px;
+}
+
+.shortcut .spacer {
+	padding: 0;
+	width: 1px;
+	height: 12px;
+	background-color: #DDDDDD;
+	margin-top: 9px;
+}
+
+.shortcut .tel-li {
+	padding-left: 25px;
+	position: relative;
+}
+
+.shortcut .tel-icon {
+	width: 15px;
+	height: 20px;
+	/*background-color: red;*/
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	background: url(../images/jd2015img.png) 0 0 no-repeat;
+}
+/* top toolbar end*/
+
+/* 顶部广告栏start */
+.topbanner {
+	height: 121px;
+	background-color: #F02B00;
+}
+
+.topbanner .banner-parent {
+	position: relative;
+}
+
+.topbanner .close-banner {
+	width: 19px;
+	height: 19px;
+	/*background-color: yellow;*/
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	background: url(../images/close.png) 0 0 no-repeat;
+}
+
+.topbanner .close-banner:hover {
+	background: url(../images/close.png) 0 -19px no-repeat;
+}
+
+/* 顶部广告栏end */
+
+/* header start */
+.header {
+	/*height: 100px;
+	background-color: pink;*/
+}
+
+.header .logo {
+	width: 362px;
+	height: 60px;
+	/*background-color: red;*/
+	float: left;
+	padding: 20px 0;
+}
+
+.logo a {
+	width: 270px;
+	height: 60px;
+	background: url(../images/logo-201305.png);
+	display: block;
+	text-indent: -999999px;
+}
+
+.header .search {
+	width: 538px;
+	height: 36px;
+	background-color: green;
+	float: left;
+	margin-top: 25px;
+}
+
+.search input {
+	width: 450px;
+	height: 32px;
+	border: 2px solid #B61D1D;
+	padding-left: 4px;
+	font: 400 14px/32px "microsoft yahei";
+	color: #666;
+	float: left;
+}
+
+.search button {
+	width: 80px;
+	height: 36px;
+	background-color: #B61D1D;
+	float: left;
+	font: 400 16px/36px "microsoft yahei";
+	color: #fff;
+	cursor: pointer;
+}
+
+.header .cart {
+	/*width: 206px;
+	height: 61px;
+	background-color: yellow;*/
+	float: right;
+	width: 99px;
+	height: 34px;
+	border: 1px solid #DFDFDF;
+	background-color: #F9F9F9;
+	margin: 25px 65px 0 0;
+	line-height: 34px;
+	padding-left: 40px;
+	position: relative;
+}
+
+.cart .icon1 {
+	width: 16px;
+	height: 13px;
+	/*background-color: red;*/
+	position: absolute;
+	top: 10px;
+	left: 15px;
+	background: url(../images/jd2015img.png) -1px -59px no-repeat;
+}
+
+.cart .icon2 {
+	font: 400 13px/13px simsun;
+	color: #999;
+	position: absolute;
+	top: 9px;
+	right: 10px;
+}
+
+.cart .icon3 {
+	/*width: 16px;*/
+	height: 14px;
+	background-color: #C81623;
+	position: absolute;
+	top: -4px;
+	left: 104px;
+	font: 400 12px/14px "microsoft yahei";
+	color: #fff;
+	text-align: center;
+	border-radius: 7px 7px 7px 0;
+	padding:0 4px;
+}
+
+.header .hotwords {
+	/*width: 470px;*/
+	height: 21px;
+	/*background-color: blue;*/
+	float: left;
+}
+
+.hotwords a {
+	float: left;
+	margin-top: 7px;
+	margin-right: 10px;
+}
+/* header end */
+
+/* footer start */
+.footer {
+	/*height: 500px;*/
+	/*background-color: pink;*/
+}
+
+.footer .service {
+	/*height: 296px;*/
+	/*background-color: green;*/
+}
+
+.service .slogan {
+	height: 94px;
+	background-color: #F5F5F5;
+	position: relative;
+}
+
+.service .slogan1 {
+	margin-left: -604px;
+
+}
+
+.service .slogan2 {
+	margin-left: -304px;
+}
+
+.service .slogan4 {
+	margin-left: 305px;
+}
+
+.service .slogan-item {
+	position: absolute;
+	top: 20px;
+	left: 50%;
+}
+
+.service .info {
+	/*height: 202px;*/
+	/*background-color: red;*/
+}
+
+.info dl {
+	float: left;
+	width: 198px;
+	height: 202px;
+	/*background-color: pink;*/
+}
+
+.info dl.last {
+	width: 100px;
+}
+
+.info dt {
+	font: 400 16px/24px "microsoft yahei";
+	margin-top: 23px;
+	margin-bottom: 6px;
+}
+
+.info dd {
+	line-height: 20px;
+}
+
+.service .coverage {
+	width: 248px;
+	height: 202px;
+	float: right;
+	/*background-color: red;*/
+	background: url(../images/20130330B_1.png) 0 -100px no-repeat;
+}
+
+.service .coverage-dt {
+	font: 400 16px/24px "microsoft yahei";
+	margin-top: 23px;
+	margin-bottom: 20px;
+	padding-left: 16px;
+
+}
+
+.service .coverage-dd {
+	width: 188px;
+	padding-left: 16px;
+}
+
+.footer .bottom {
+	/*height: 196px;*/
+	/*background-color: pink;*/
+	border-top: 1px solid #E5E5E5;
+}
+
+.bottom .links {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.links a {
+	padding: 0 10px;
+}
+
+.bottom .copyright {
+	margin-top: 15px;
+	text-align: center;
+}
+
+.bottom .authentication {
+	margin-top: 10px;
+	text-align: center;
+}
+
+.authentication a {
+	margin-right: 10px;
+}
+/* footer end */

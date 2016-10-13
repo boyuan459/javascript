@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		span {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" id="txtName"><span></span><br/>
+	<input type="text" id="txtPwd">
+	<span></span><br>
+	<script type="text/javascript">
+		
+		var txtName = document.getElementById('txtName');
+		txtName.onkeyup = function() {
+			if (this.value.length < 3 || this.value.length > 6) {
+				this.nextSibling.innerText = "username must be 3 to 6 characters";
+			} else {
+				this.nextSibling.innerText = "";
+			}
+		};
+
+		var txtPwd = document.getElementById('txtPwd');
+		txtPwd.onkeyup = function() {
+			if (this.value.length < 3 || this.value.length > 8) {
+				// this.nextSibling.innerText = "password must be within 3 to 8 characters";
+				// this.nextElementSibling.innerText = "password must be within 3 to 8 characters";
+				var nextEl = getNextElement(this);
+				nextEl.innerText = "password must be within 3 to 8 characters";
+			} else {
+				// this.nextSibling.innerText = "";
+				this.nextElementSibling.innerText = "";
+			}
+		};
+
+		function getNextElement(element) {
+			if (element.nextElementSibling) {
+				return element.nextElementSibling;
+			} else {
+				var nextEl = element.nextSibling;
+				while(nextEl && nextEl.nodeType !== 1) {
+					nextEl = nextEl.nextSibling;
+				}
+
+				return nextEl;
+			}
+		}
+	</script>
+</body>
+</html>
