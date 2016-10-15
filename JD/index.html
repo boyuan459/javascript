@@ -160,17 +160,23 @@
 <!-- content start -->
 <div class="w main clearfix">
 	<div class="slider">
-		<a href="#"><img src="./images/slider1.jpg"></a>
+		<ul id="slider">
+			<li><a href="#"><img src="./images/slider1.jpg"></a></li>
+			<li><a href="#"><img src="./images/slider2.jpg"></a></li>
+			<li><a href="#"><img src="./images/slider3.jpg"></a></li>
+			<li><a href="#"><img src="./images/slider4.jpg"></a></li>
+			<li><a href="#"><img src="./images/slider5.jpg"></a></li>
+		</ul>
+
 		<!-- slider navigation -->
-		<ul class="slider-nav">
-			<li class="slider-item"><a href="">1</a></li>
+		<ul class="slider-nav" id="slider-nav">
+			<!--<li class="slider-item"><a href="">1</a></li>
 			<li class="slider-item"><a href="">2</a></li>
 			<li class="slider-item active"><a href="">3</a></li>
 			<li class="slider-item"><a href="">4</a></li>
-			<li class="slider-item"><a href="">5</a></li>
-			<li class="slider-item"><a href="">6</a></li>
-			<li class="slider-item"><a href="">7</a></li>
+			<li class="slider-item"><a href="">5</a></li>-->
 		</ul>
+
 		<!-- slider arrow -->
 		<div class="arrow">
 			<a href="javascript:;" class="arrow-l">&lt;</a>
@@ -435,6 +441,17 @@ var icons = ul.getElementsByTagName('i');
 
 for (var i=0;i<icons.length;i++) {
 	icons[i].style.background = "url(images/icon_lifeserv.png) -25px " + (-25 * i) + "px no-repeat";
+}
+
+var slider = document.getElementById('slider');
+var sliderlis = slider.children;
+var slider_nav = document.getElementById('slider-nav');
+//<li class="slider-item"><a href="">1</a></li>
+for (var i=0;i<sliderlis.length;i++) {
+	var li = document.createElement('li');
+	li.setAttribute('class', 'slider-item');
+	li.innerHTML = i+1;
+	slider_nav.appendChild(li);
 }
 
 </script>
