@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>Weibo</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .box {
+                margin: 100px auto;
+                border: 1px solid #333;
+                width: 600px;
+                height: auto;
+                padding: 30px 0;
+            }
+            
+            textarea {
+                width: 400px;
+                resize: none;   //avoid drag
+            }
+            
+            .box li {
+                width: 450px;
+                line-height: 30px;
+                border-bottom: 1px dashed #ccc;
+                list-style: none;
+                margin-left: 35px;
+            }
+            .box li a {
+                float: right;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            Tweet: <textarea name="tweet" id="tweet" cols="30" rows="10"></textarea> <button>Tweet</button>
+            <ul id="tweets">
+                
+            </ul>
+        </div>
+    </body>
+    <script>
+        var btn = document.getElementsByTagName('button')[0];
+        var tweet = document.getElementsByTagName('textarea')[0];
+        var tweets = document.getElementById('tweets');
+        
+        btn.onclick = function() {
+            if (tweet.value == '') {
+                alert("Please put some content on your tweet");
+                return;
+            }
+            
+            var li = document.createElement('li');
+            li.innerHTML = tweet.value + '<a href="javascript:;">Delete</a>';
+            tweets.insertBefore(li, tweets.children[0]);
+            
+            tweet.value = "";
+            
+            var deletelinks = tweets.getElementsByTagName('a');
+            for(var i=0;i<deletelinks.length;i++) {
+                deletelinks[i].onclick = function() {
+                    tweets.removeChild(this.parentNode);
+                }
+            }
+        }
+        
+    </script>
+</html>
