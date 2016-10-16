@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <style>
+            .box {
+                width: 200px;
+                height: 250px;
+                background: #369;
+                margin: 100px auto;
+                text-align: center;
+            }
+            
+            .box p {
+                line-height: 50px;
+                font-size: 15px;
+                color: #ffffff;
+                text-align: center;
+            }
+            
+            .box span {
+                font-size: 40px;
+                color: #777;
+                display: block;
+                width: 75px;
+                height: 75px;
+                line-height: 75px;
+                background-color: yellowgreen;
+                border-radius: 5px;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box" id='calendar'>
+            <p></p>
+            <span></span>
+        </div>
+        <script>
+            var date = new Date();
+            var calendar = document.getElementById('calendar');
+            var children = calendar.children;
+            var weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            children[0].innerHTML = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate() + ' ' + weekdays[date.getDay()];
+            
+            children[1].innerHTML = date.getDate();
+            
+        </script>
+    </body>
+</html>
