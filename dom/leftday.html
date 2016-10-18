@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="demo"></div>
+        <script>
+            var demo = document.getElementById('demo');
+            var endTime = new Date('2016/10/20 17:30:00');
+            
+            setInterval(fn, 1000);
+            
+            function fn()
+            {
+                var now = Date.now();
+                var seconds = parseInt((endTime.getTime() - now)/1000);
+                var days = parseInt(seconds/3600/24);
+                var hours = parseInt(seconds/3600%24);
+                var minutes = parseInt(seconds/60%60)
+                var seconds = parseInt(seconds%60);
+                demo.innerHTML = 'days: ' + (days<10?'0'+days:days) + ' hours: ' + (hours<10?'0'+hours:hours) + ' minutes: ' + (minutes<10?'0'+minutes:minutes) + ' seconds:' + (seconds<10?'0'+seconds:seconds);
+            }
+        </script>
+    </body>
+</html>
